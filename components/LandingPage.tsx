@@ -318,10 +318,10 @@ const LandingPage = () => {
               <CardContent className="p-8 text-center">
                 <Gift className="w-16 h-16 text-brand mx-auto mb-4" />
                 <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                  โปรพิเศษ! เติมครั้งแรก ลดเพิ่ม 5%
+                  รับโปรพิเศษสุดคุ้ม
                 </h3>
                 <p className="text-lg text-gray-300 mb-6">
-                  สำหรับลูกค้าใหม่เท่านั้น รีบจับโปรก่อนหมดเขต
+                  รับได้ทันที วันนี้เท่านั้น!
                 </p>
                 <Button 
                   size="lg" 
