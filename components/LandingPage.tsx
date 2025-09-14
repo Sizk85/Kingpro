@@ -76,7 +76,7 @@ const LandingPage = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <Image
-              src="/images/logo kingpro.jpg"
+              src="/images/logo_kingpro-removebg-preview"
               alt="KingPro Logo"
               width={120}
               height={40}
@@ -413,7 +413,7 @@ const LandingPage = () => {
         <div className="container mx-auto text-center">
           <div className="flex justify-center mb-4">
             <Image
-              src="/images/logo kingpro.jpg"
+              src="/images/logo_kingpro-removebg-preview"
               alt="KingPro Logo"
               width={150}
               height={50}
