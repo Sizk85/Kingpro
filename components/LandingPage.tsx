@@ -74,7 +74,15 @@ const LandingPage = () => {
       {/* Header */}
       <header className="fixed top-0 w-full z-40 backdrop-blur-hero bg-black/20 border-b border-white/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-brand">KingPro</div>
+          <div className="flex items-center">
+            <Image
+              src="/images/logo kingpro.jpg"
+              alt="KingPro Logo"
+              width={120}
+              height={40}
+              className="object-contain"
+            />
+          </div>
           <Button 
             onClick={() => handleCTAClick("header")}
             className="hidden md:flex"
@@ -403,7 +411,15 @@ const LandingPage = () => {
       {/* Footer */}
       <footer className="py-8 px-4 bg-black/40 border-t border-gray-800">
         <div className="container mx-auto text-center">
-          <div className="text-2xl font-bold text-brand mb-4">KingPro</div>
+          <div className="flex justify-center mb-4">
+            <Image
+              src="/images/logo kingpro.jpg"
+              alt="KingPro Logo"
+              width={150}
+              height={50}
+              className="object-contain"
+            />
+          </div>
           <p className="text-gray-400 mb-4">
             บริการเติมเกมออนไลน์ราคาถูก เติมเร็วทันใจ ปลอดภัย
           </p>
