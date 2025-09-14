@@ -94,7 +94,7 @@ const LandingPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-28 md:pt-36 pb-16 px-4 relative overflow-hidden">
+      <section className="pt-40 md:pt-48 pb-16 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-brand/10 via-transparent to-success/10"></div>
         <div className="container mx-auto text-center relative z-10">
           <motion.div
