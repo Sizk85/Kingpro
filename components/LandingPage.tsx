@@ -75,13 +75,13 @@ const LandingPage = () => {
       <header className="fixed top-0 w-full z-40 backdrop-blur-hero bg-black/20 border-b border-white/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
-            <Image
-              src="/images/logo_kingpro-removebg-preview"
-              alt="KingPro Logo"
-              width={120}
-              height={40}
-              className="object-contain"
-            />
+              <Image
+                src="/images/logo_kingpro-removebg-preview.png"
+                alt="KingPro Logo"
+                width={120}
+                height={40}
+                className="object-contain"
+              />
           </div>
           <Button 
             onClick={() => handleCTAClick("header")}
@@ -413,7 +413,7 @@ const LandingPage = () => {
         <div className="container mx-auto text-center">
           <div className="flex justify-center mb-4">
             <Image
-              src="/images/logo_kingpro-removebg-preview"
+              src="/images/logo_kingpro-removebg-preview.png"
               alt="KingPro Logo"
               width={150}
               height={50}
