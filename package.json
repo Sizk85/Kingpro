@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && npx wrangler pages deploy out --project-name kingpro"
+    "deploy": "next build && npx wrangler pages deploy out"
   },
   "dependencies": {
     "next": "14.0.0",
