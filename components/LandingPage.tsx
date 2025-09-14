@@ -73,13 +73,13 @@ const LandingPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-[#0B1020] via-[#1a1f3a] to-[#0B1020] text-white">
       {/* Header */}
       <header className="fixed top-0 w-full z-40 backdrop-blur-hero bg-black/20 border-b border-white/10">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-2 flex justify-between items-center">
           <div className="flex items-center">
               <Image
                 src="/images/logo_kingpro-removebg-preview.png"
                 alt="KingPro Logo"
-                width={120}
-                height={40}
+                width={70}
+                height={32}
                 className="object-contain"
               />
           </div>
@@ -94,7 +94,7 @@ const LandingPage = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-40 md:pt-48 pb-16 px-4 relative overflow-hidden">
+      <section className="pt-36 pb-16 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-brand/10 via-transparent to-success/10"></div>
         <div className="container mx-auto text-center relative z-10">
           <motion.div
@@ -104,7 +104,7 @@ const LandingPage = () => {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               เติมเกมไว ปลอดภัย ราคาโปร<br />
-              <span className="text-brand">— กับ KingPro</span>
+              <span className="text-brand">กับ KingPro</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
