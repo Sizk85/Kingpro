@@ -1,7 +1,11 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import GamePackages from "./GamePackages"
+import TermsOfService from "./TermsOfService"
+import PrivacyPolicy from "./PrivacyPolicy"
 import { 
   CheckCircle, 
   Zap, 
@@ -21,9 +25,18 @@ import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 const LandingPage = () => {
+  const [selectedGame, setSelectedGame] = useState<string | null>(null)
+  const [showTerms, setShowTerms] = useState(false)
+  const [showPrivacy, setShowPrivacy] = useState(false)
+
   const handleCTAClick = (source: string) => {
     console.log(`CTA clicked from: ${source}`)
     window.open("https://lin.ee/GGT0Lst", "_blank")
+  }
+
+  const handleGameSelect = (gameName: string) => {
+    console.log(`Game selected: ${gameName}`)
+    setSelectedGame(gameName)
   }
 
   const gameCards = [
@@ -57,15 +70,15 @@ const LandingPage = () => {
     },
     {
       question: "เติมผิดเกมหรือผิด ID ทำยังไง?",
-      answer: "หากเติมผิดเกมหรือผิด ID กรุณาติดต่อทีมงานทันที เราจะช่วยแก้ไขให้ในกรณีที่ยังไม่ได้ทำรายการ"
+      answer: "หากเติมผิดเกมหรือผิด ID กรุณาติดต่อทีมงาน KingPro ทันทีทาง LINE @kingpro.th เราจะช่วยแก้ไขให้ในกรณีที่ยังไม่ได้ทำรายการ"
     },
     {
-      question: "ติดต่อแอดมินได้ที่ไหน?",
-      answer: "ติดต่อได้ทาง LINE Official Account หรือแชทในเว็บไซต์ ทีมงานพร้อมให้บริการ 24/7"
+      question: "ติดต่อทีมงาน KingPro ได้ที่ไหน?",
+      answer: "ติดต่อได้ทาง LINE Official Account: @kingpro.th หรือ Facebook Page: KingproTopup หรือคลิกปุ่มแชทในเว็บไซต์ ทีมงาน KingPro พร้อมให้บริการและแก้ไขปัญหา 24 ชั่วโมง"
     },
     {
       question: "ข้อมูลส่วนตัวปลอดภัยไหม?",
-      answer: "ข้อมูลของคุณปลอดภัย 100% เราใช้ระบบเข้ารหัส SSL และไม่เก็บข้อมูลบัตรเครดิตของลูกค้า"
+      answer: "ข้อมูลของคุณปลอดภัย 100% กับ KingPro เราใช้ระบบเข้ารหัส SSL และไม่เก็บข้อมูลบัตรเครดิตของลูกค้า ทีมงานเรามีประสบการณ์ด้านความปลอดภัยมากกว่า 3 ปี"
     }
   ]
 
@@ -210,7 +223,7 @@ const LandingPage = () => {
                   <CardContent>
                     <Button 
                       className="w-full" 
-                      onClick={() => handleCTAClick(`game-${game.name}`)}
+                      onClick={() => handleGameSelect(game.name)}
                       data-attr={`game-card-click-${game.name}`}
                     >
                       เลือกแพ็ก
@@ -269,7 +282,10 @@ const LandingPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">ลูกค้าไว้วางใจเรา</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">ลูกค้าไว้วางใจเรา</h2>
+            <p className="text-lg text-gray-300 mb-8">
+              ทีม KingPro ให้บริการมากกว่า 3 ปี พร้อมซัพพอร์ต 24/7
+            </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
@@ -333,6 +349,56 @@ const LandingPage = () => {
                 </Button>
               </CardContent>
             </Card>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Info Section */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">ติดต่อทีมงาน KingPro</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              <Card className="bg-gray-800/50 border-gray-700 cursor-pointer hover:border-brand/50 transition-all duration-300 hover:scale-105" onClick={() => { console.log("LINE Official card clicked"); window.open("https://lin.ee/GGT0Lst", "_blank"); }}>
+                <CardContent className="p-6 text-center">
+                  <MessageCircle className="w-10 h-10 text-brand mx-auto mb-3" />
+                  <h3 className="text-lg font-bold mb-3">LINE Official</h3>
+                  <p className="text-gray-300 mb-2">@kingpro.th</p>
+                  <p className="text-xs text-gray-400">
+                    ช่องทางหลักสำหรับสั่งซื้อ<br />
+                    ตอบกลับเร็วที่สุด ภายใน 5 นาที
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-800/50 border-gray-700 cursor-pointer hover:border-blue-500/50 transition-all duration-300 hover:scale-105" onClick={() => { console.log("Facebook Page card clicked"); window.open("https://www.facebook.com/KingproTopup", "_blank"); }}>
+                <CardContent className="p-6 text-center">
+                  <Users className="w-10 h-10 text-blue-500 mx-auto mb-3" />
+                  <h3 className="text-lg font-bold mb-3">Facebook Page</h3>
+                  <p className="text-gray-300 mb-2">KingproTopup</p>
+                  <p className="text-xs text-gray-400">
+                    ติดตามข่าวสารและโปรโมชั่น<br />
+                    อัพเดตล่าสุดทุกวัน
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gray-800/50 border-gray-700">
+                <CardContent className="p-6 text-center">
+                  <Clock className="w-10 h-10 text-success mx-auto mb-3" />
+                  <h3 className="text-lg font-bold mb-3">เวลาทำการ</h3>
+                  <p className="text-gray-300 mb-2">24 ชั่วโมง ทุกวัน</p>
+                  <p className="text-xs text-gray-400">
+                    ทีมงาน KingPro พร้อมให้บริการ<br />
+                    รวดเร็ว ปลอดภัย เชื่อถือได้
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -421,13 +487,54 @@ const LandingPage = () => {
             />
           </div>
           <p className="text-gray-400 mb-4">
-            บริการเติมเกมออนไลน์ราคาถูก เติมเร็วทันใจ ปลอดภัย
+            บริการเติมเกมออนไลน์ราคาถูก เติมเร็วทันใจ ปลอดภัย<br />
+            ติดต่อเรา: LINE @kingpro.th | Facebook: KingproTopup
           </p>
-          <p className="text-gray-500 text-sm">
-            © 2024 KingPro. All rights reserved.
+          <p className="text-gray-500 text-sm mb-2">
+            © 2024 KingPro - บริการเติมเกมออนไลน์อันดับ 1 ในไทย
           </p>
+          <p className="text-gray-600 text-xs">
+            ทีมงานพร้อมให้บริการ 24/7 | รับประกันความปลอดภัย 100%
+          </p>
+          <div className="mt-4 pt-4 border-t border-gray-700 flex justify-center gap-4">
+            <button 
+              onClick={() => setShowTerms(true)}
+              className="text-gray-500 hover:text-brand text-xs underline transition-colors"
+            >
+              เงื่อนไขการให้บริการ
+            </button>
+            <span className="text-gray-600">|</span>
+            <button 
+              onClick={() => setShowPrivacy(true)}
+              className="text-gray-500 hover:text-brand text-xs underline transition-colors"
+            >
+              นโยบายความเป็นส่วนตัว
+            </button>
+          </div>
         </div>
       </footer>
+
+      {/* Game Packages Modal */}
+      {selectedGame && (
+        <GamePackages 
+          gameName={selectedGame}
+          onClose={() => setSelectedGame(null)}
+        />
+      )}
+
+      {/* Terms of Service Modal */}
+      {showTerms && (
+        <TermsOfService 
+          onClose={() => setShowTerms(false)}
+        />
+      )}
+
+      {/* Privacy Policy Modal */}
+      {showPrivacy && (
+        <PrivacyPolicy 
+          onClose={() => setShowPrivacy(false)}
+        />
+      )}
     </div>
   )
 }
