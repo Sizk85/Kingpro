@@ -74,7 +74,7 @@ const LandingPage = () => {
       {/* Header */}
       <header className="fixed top-0 w-full z-40 backdrop-blur-hero bg-black/20 border-b border-white/10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="text-2xl font-bold text-brand">Kingpro Topup</div>
+          <div className="text-2xl font-bold text-brand">KingPro</div>
           <Button 
             onClick={() => handleCTAClick("header")}
             className="hidden md:flex"
@@ -96,7 +96,7 @@ const LandingPage = () => {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               เติมเกมไว ปลอดภัย ราคาโปร<br />
-              <span className="text-brand">— กับ Kingpro Topup</span>
+              <span className="text-brand">— กับ KingPro</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -375,7 +375,7 @@ const LandingPage = () => {
               พร้อมเติมเกมแล้วใช่ไหม?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              เริ่มต้นใช้งาน Kingpro Topup วันนี้ รับประกันความปลอดภัย 100%
+              เริ่มต้นใช้งาน KingPro วันนี้ รับประกันความปลอดภัย 100%
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -403,12 +403,12 @@ const LandingPage = () => {
       {/* Footer */}
       <footer className="py-8 px-4 bg-black/40 border-t border-gray-800">
         <div className="container mx-auto text-center">
-          <div className="text-2xl font-bold text-brand mb-4">Kingpro Topup</div>
+          <div className="text-2xl font-bold text-brand mb-4">KingPro</div>
           <p className="text-gray-400 mb-4">
-            บริการเติมเกม/โค้ดดิจิทัล รวดเร็ว ปลอดภัย ราคาเป็นกันเอง
+            บริการเติมเกมออนไลน์ราคาถูก เติมเร็วทันใจ ปลอดภัย
           </p>
           <p className="text-gray-500 text-sm">
-            © 2024 Kingpro Topup. All rights reserved.
+            © 2024 KingPro. All rights reserved.
           </p>
         </div>
       </footer>

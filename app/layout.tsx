@@ -3,11 +3,11 @@ import './globals.css'
 import LineFab from '@/components/LineFab'
 
 export const metadata: Metadata = {
-  title: 'Kingpro Topup | เติมเกมไว ปลอดภัย ราคาโปร',
+  title: 'KingPro - บริการเติมเกมออนไลน์ราคาถูก เติมเร็วทันใจ ปลอดภัย',
   description: 'บริการเติมเกม/โค้ดดิจิทัล รวดเร็ว ปลอดภัย ราคาเป็นกันเอง รองรับหลายเกม ยืนยันไว มีทีมงานดูแล',
   keywords: 'เติมเกม, topup, rov, free fire, pubg, valorant, genshin, roblox, steam, google play, itunes',
   openGraph: {
-    title: 'Kingpro Topup | เติมเกมไว ปลอดภัย ราคาโปร',
+    title: 'KingPro - บริการเติมเกมออนไลน์ราคาถูก เติมเร็วทันใจ ปลอดภัย',
     description: 'บริการเติมเกม/โค้ดดิจิทัล รวดเร็ว ปลอดภัย ราคาเป็นกันเอง รองรับหลายเกม ยืนยันไว มีทีมงานดูแล',
     images: [
       {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kingpro Topup | เติมเกมไว ปลอดภัย ราคาโปร',
+    title: 'KingPro - บริการเติมเกมออนไลน์ราคาถูก เติมเร็วทันใจ ปลอดภัย',
     description: 'บริการเติมเกม/โค้ดดิจิทัล รวดเร็ว ปลอดภัย ราคาเป็นกันเอง รองรับหลายเกม ยืนยันไว มีทีมงานดูแล',
     images: ['/images/og fb.jpg'],
   },
