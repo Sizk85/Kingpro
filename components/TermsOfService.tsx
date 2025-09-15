@@ -77,23 +77,21 @@ const TermsOfService = ({ onClose }: TermsOfServiceProps) => {
 
               <h3 className="text-xl font-bold text-brand mb-4">การสั่งซื้อและการเติมเงิน</h3>
               <div className="text-gray-300 text-sm space-y-4 mb-6">
-                <p>KingPro สนับสนุนให้ผู้ใช้บริการทำการเติมเงินผ่านช่องทางต่อไปนี้:</p>
-                <ul className="list-disc list-inside ml-4 space-y-2">
-                  <li>โอนเงินผ่านธนาคาร</li>
-                  <li>ทรูมันนี่วอลเล็ท</li>
-                  <li>Promptpay (พร้อมเพย์)</li>
-                  <li>บัตรเครดิต</li>
-                </ul>
-                <p>ผู้ใช้บริการสามารถเลือกช่องทางการเติมเงินได้ด้วยตนเองในขั้นตอนการเติมเงิน</p>
+                <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4 mb-4">
+                  <p className="text-blue-400 text-sm font-semibold mb-2">ช่องทางการชำระเงินที่รองรับ:</p>
+                  <p className="text-gray-300 text-sm mb-3">
+                    KingPro รองรับการชำระเงินผ่าน <strong>2 ช่องทางหลัก</strong> เท่านั้น 
+                    เพื่อให้บริการที่รวดเร็วและมีประสิทธิภาพสูงสุด
+                  </p>
+                  <ul className="list-disc list-inside ml-4 space-y-2">
+                    <li><strong>โอนเงินผ่านธนาคาร</strong> - รองรับธนาคารชั้นนำทุกแห่งในประเทศไทย</li>
+                    <li><strong>TrueMoney Wallet</strong> - ชำระผ่านแอปพลิเคชัน TrueMoney Wallet</li>
+                  </ul>
+                </div>
+                <p>ผู้ใช้บริการสามารถเลือกช่องทางการชำระเงินได้ด้วยตนเองในขั้นตอนการสั่งซื้อ</p>
                 <p>KingPro ขอสงวนสิทธิ์ไม่รับผิดชอบใดๆ ต่อความสูญเสียหรือความเสียหายแก่ผู้ใช้บริการอันเกิดจากความผิดพลาดของผู้ใช้บริการ</p>
               </div>
 
-              <h3 className="text-xl font-bold text-brand mb-4">นโยบายการคืนเงิน</h3>
-              <div className="text-gray-300 text-sm space-y-4 mb-6">
-                <p>ผู้ใช้บริการสามารถทำการขอคืนเงิน (Refund) ได้ โดยจะต้องแจ้งขอคืนเงินภายในระยะเวลา 7 วันนับจากวันที่ได้ทำการชำระเงินให้กับทาง KingPro</p>
-                <p>KingPro ขอสงวนสิทธิ์ในการคืนเงินให้กับผู้ใช้บริการ กรณีที่ผู้ใช้บริการได้ทำการแจ้งขอคืนเงินล่าช้ากว่า 7 วันนับจากวันที่ผู้ใช้บริการทำรายการ</p>
-                <p>ผู้ใช้บริการรับทราบว่า KingPro ไม่มีนโยบายการคืนเงินคงเหลือภายในบัญชีผู้ใช้บริการไม่ว่าในกรณีใดๆ</p>
-              </div>
 
               <h3 className="text-xl font-bold text-brand mb-4">การติดต่อและการบริการลูกค้า</h3>
               <div className="text-gray-300 text-sm space-y-4 mb-6">
@@ -101,6 +99,7 @@ const TermsOfService = ({ onClose }: TermsOfServiceProps) => {
                 <ul className="list-disc list-inside ml-4 space-y-2">
                   <li>LINE Official Account: @kingpro.th</li>
                   <li>Facebook Page: KingproTopup</li>
+                  <li>Email: KingPro.online168@gmail.com</li>
                   <li>เวลาทำการ: 24 ชั่วโมง ทุกวัน</li>
                 </ul>
                 <p>ทีมงาน KingPro พร้อมให้บริการและแก้ไขปัญหาตลอด 24/7 โดยมีเป้าหมายตอบกลับภายใน 5 นาที</p>
@@ -130,8 +129,9 @@ const TermsOfService = ({ onClose }: TermsOfServiceProps) => {
               <div className="bg-gray-800/50 rounded-lg p-4 mt-6">
                 <p className="text-center text-gray-400 text-sm">
                   <strong>ติดต่อเรา:</strong><br />
-                  LINE Official Account: @@kingpro.th<br />
+                  LINE Official Account: @kingpro.th<br />
                   Facebook Page: KingproTopup<br />
+                  Email: KingPro.online168@gmail.com<br />
                   เวลาทำการ: 24 ชั่วโมง ทุกวัน
                 </p>
               </div>

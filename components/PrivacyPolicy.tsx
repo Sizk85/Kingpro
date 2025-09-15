@@ -187,6 +187,7 @@ const PrivacyPolicy = ({ onClose }: PrivacyPolicyProps) => {
                   <strong>ติดต่อเรา:</strong><br />
                   LINE Official Account: @kingpro.th<br />
                   Facebook Page: KingproTopup<br />
+                  Email: KingPro.online168@gmail.com<br />
                   เวลาทำการ: 24 ชั่วโมง ทุกวัน<br />
                   <br />
                   หากคุณต้องการใช้สิทธิของคุณในฐานะเจ้าของข้อมูลส่วนบุคคล<br />

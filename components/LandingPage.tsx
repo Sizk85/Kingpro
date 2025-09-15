@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import GamePackages from "./GamePackages"
 import TermsOfService from "./TermsOfService"
+import RefundPolicy from "./RefundPolicy"
 import PrivacyPolicy from "./PrivacyPolicy"
 import { 
   CheckCircle, 
@@ -27,6 +28,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const LandingPage = () => {
   const [selectedGame, setSelectedGame] = useState<string | null>(null)
   const [showTerms, setShowTerms] = useState(false)
+  const [showRefund, setShowRefund] = useState(false)
   const [showPrivacy, setShowPrivacy] = useState(false)
 
   const handleCTAClick = (source: string) => {
@@ -62,7 +64,7 @@ const LandingPage = () => {
     },
     {
       question: "จ่ายเงินผ่านช่องทางไหนได้บ้าง?",
-      answer: "รองรับการจ่ายเงินผ่าน โอนธนาคาร, พร้อมเพย์, ทรูมันนี่ วอลเล็ต และบัตรเครดิต"
+      answer: "รองรับการจ่ายเงินผ่าน โอนธนาคาร, พร้อมเพย์, ทรูมันนี่ วอลเล็ต"
     },
     {
       question: "มีการรับประกันไหม?",
@@ -78,7 +80,7 @@ const LandingPage = () => {
     },
     {
       question: "ข้อมูลส่วนตัวปลอดภัยไหม?",
-      answer: "ข้อมูลของคุณปลอดภัย 100% กับ KingPro เราใช้ระบบเข้ารหัส SSL และไม่เก็บข้อมูลบัตรเครดิตของลูกค้า ทีมงานเรามีประสบการณ์ด้านความปลอดภัยมากกว่า 3 ปี"
+      answer: "ข้อมูลของคุณปลอดภัย 100% กับ KingPro เราใช้ระบบเข้ารหัส SSL และไม่เก็บข้อมูลของลูกค้า ทีมงานเรามีประสบการณ์ด้านความปลอดภัยมากกว่า 3 ปี"
     }
   ]
 
@@ -488,7 +490,7 @@ const LandingPage = () => {
           </div>
           <p className="text-gray-400 mb-4">
             บริการเติมเกมออนไลน์ราคาถูก เติมเร็วทันใจ ปลอดภัย<br />
-            ติดต่อเรา: LINE @kingpro.th | Facebook: KingproTopup
+            ติดต่อเรา: LINE @kingpro.th | Facebook: KingproTopup | Email: KingPro.online168@gmail.com
           </p>
           <p className="text-gray-500 text-sm mb-2">
             © 2024 KingPro - บริการเติมเกมออนไลน์อันดับ 1 ในไทย
@@ -502,6 +504,13 @@ const LandingPage = () => {
               className="text-gray-500 hover:text-brand text-xs underline transition-colors"
             >
               เงื่อนไขการให้บริการ
+            </button>
+            <span className="text-gray-600">|</span>
+            <button 
+              onClick={() => setShowRefund(true)}
+              className="text-gray-500 hover:text-brand text-xs underline transition-colors"
+            >
+              นโยบายการคืนเงิน
             </button>
             <span className="text-gray-600">|</span>
             <button 
@@ -526,6 +535,13 @@ const LandingPage = () => {
       {showTerms && (
         <TermsOfService 
           onClose={() => setShowTerms(false)}
+        />
+      )}
+
+      {/* Refund Policy Modal */}
+      {showRefund && (
+        <RefundPolicy 
+          onClose={() => setShowRefund(false)}
         />
       )}
 
